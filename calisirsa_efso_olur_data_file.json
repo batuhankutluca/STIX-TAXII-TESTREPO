@@ -1,0 +1,49 @@
+{
+    "/discovery": {
+        "title": "TAXII SERVER",
+        "api_roots": [
+            "http://127.0.0.1:5000/domain_blacklist/"
+        ]
+    },
+    "domain_blacklist": {
+        "information": {
+            "title": "Domain Blacklist Collection",
+            "description": "A trust group setup for malware researchers",
+            "versions": [
+                "application/taxii+json;version=2.1"
+            ],
+            "max_content_length": 9765625
+        },
+        "collections": [
+            {
+                "id": "91a7b528-80eb-42ed-a74d-c6fbd5a26116",
+                "title": "High Value Indicator Collection",
+                "description": "This data collection is for collecting high value IOCs",
+                "can_read": true,
+                "can_write": true,
+                "media_types": [
+                    "application/stix+json;version=2.0",
+                    "application/stix+json;version=2.1"
+                ],
+                "objects": [
+                    {
+                        "created": "2016-11-03T12:30:59.000Z",
+                        "id": "indicator--6770298f-0fd8-471a-ab8c-1c658a46574e",
+                        "modified": "2016-11-03T12:30:59.000Z",
+                        "pattern": "[domain-name:value = 'batuhankutluca.com']",
+                        "spec_version": "2.1",
+                        "type": "indicator"
+                    }
+                ],
+                "manifest": [
+                    {
+                        "date_added": "2017-11-03T12:30:59.001000Z",
+                        "id": "indicator--6770298f-0fd8-471a-ab8c-1c658a46574e",
+                        "media_type": "application/stix+json;version=2.1",
+                        "version": "2016-11-03T12:30:59.000Z"
+                    }
+                ]
+            }
+        ]
+    }
+}
